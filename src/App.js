@@ -4,6 +4,7 @@ import Main from "./layout/Main";
 import Blogs from "./pages/Blogs/Blogs";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
 import ServiceDetails from "./pages/ServiceDetails/ServiceDetails";
 import Services from "./pages/Services/Services";
 
@@ -34,6 +35,10 @@ function App() {
             {
                path: "login",
                element: <Login></Login>,
+            },
+            {
+               path: "register",
+               element: <Register></Register>,
             },
          ],
       },
