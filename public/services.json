@@ -1,41 +1,35 @@
 [
     {
-      "_id": "636949a051c77a6c39f1ee13",
       "name": "Interior Design",
       "description": "Interior design is the art and science of enhancing the interior of a building to achieve a healthier and more aesthetically pleasing environment for the people using the space. An interior designer is someone who plans, researches, coordinates, and manages such enhancement projects. Interior design is a multifaceted profession that includes conceptual development, space planning, site inspections, programming, research, communicating with the stakeholders of a project, construction management, and execution of the design.",
       "picture": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1400&q=80",
       "price": 2.5
     },
     {
-      "_id": "636949a04ccbf9af77d0a9bc",
       "name": "Hotel Design",
       "description": "Hotel design involves the planning, drafting, design and development of hotels. The concept of hotel design is rooted in traditions of hospitality to travellers dating back to ancient times, and the development of many diverse types of hotels has occurred in many cultures. For example, the advent of rail travel in the early 1900s led to the planning, design and development of hotels near railroad stations that catered to rail travelers. Hotels around Grand Central Terminal in New York City are an example of this phenomenon. Hotel interior design and styles are very diverse, with numerous variations existent.",
       "picture": "https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
       "price": 2.0
     },
     {
-      "_id": "636949a0beea8c6f17a2a4ed",
       "name": "Mosque Design",
       "description": "Arab-plan or hypostyle mosques are the earliest type of mosques, pioneered under the Umayyad Dynasty. These mosques have square or rectangular plans with an enclosed courtyard (sahn) and covered prayer hall. Historically, in the warm Middle Eastern and Mediterranean climates, the courtyard served to accommodate the large number of worshippers during Friday prayers. Most early hypostyle mosques had flat roofs on prayer halls, which required the use of numerous columns and supports. One of the most notable hypostyle mosques is the Great Mosque of Cordoba in Spain, the building being supported by over 850 columns. Frequently, hypostyle mosques have outer arcades (riwaq) so that visitors can enjoy the shade. Arab-plan mosques were constructed mostly under the Umayyad and Abbasid dynasties. The simplicity of the Arab plan limited the opportunities for further development, the mosques consequently losing popularity.",
       "picture": "https://images.unsplash.com/photo-1584027123930-c1f17b17ee1a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
       "price": 3.5
     },
     {
-      "_id": "636949a0ab978ca19b3c4398",
       "name": "Residential Building Design",
       "description": "Single-family residential buildings are most often called houses or homes. Multi-family residential buildings containing more than one dwelling unit are called a duplex or an apartment building. A condominium is an apartment that the occupant owns rather than rents. Houses may also be built in pairs (semi-detached), in terraces where all but two of the houses have others either side; apartments may be built round courtyards or as rectangular blocks surrounded by a piece of ground of varying sizes. Houses which were built as a single dwelling may later be divided into apartments or bedsitters; they may also be converted to another use e.g. an office or a shop. hotels, especially of the extended stay variety (like apartels) can also be classed as residential.",
       "picture": "https://images.unsplash.com/photo-1565363887715-8884629e09ee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80",
       "price": 3.0
     },
     {
-      "_id": "636949a0a25e9b5d694dea74",
       "name": "Soil Testing",
       "description": "Soil testing is often performed by commercial labs that offer a variety of tests, targeting groups of compounds and minerals. The advantages associated with local lab is that they are familiar with the chemistry of the soil in the area where the sample was taken. This enables technicians to recommend the tests that are most likely to reveal useful information. The amount of plant available soil phosphorus is most often measured with a chemical extraction method, and different countries have different standard methods. Just in Europe, more than 10 different soil P tests are currently in use and the results from these tests are not directly comparable with each other.",
       "picture": "https://images.unsplash.com/photo-1517089596392-fb9a9033e05b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
       "price": 4.5
     },
     {
-      "_id": "636949a0fe8ab05d35d5c328",
       "name": "Home Renovation",
       "description": "The concept of home improvement, home renovation, or remodeling is the process of renovating or making additions to one's home. Home improvement can consist of projects that upgrade an existing home interior (such as electrical and plumbing), exterior (masonry, concrete, siding, roofing) or other improvements to the property (i.e. garden work or garage maintenance/additions). Home improvement projects can be carried out for a number of different reasons; personal preference and comfort, maintenance or repair work, making a home bigger by adding rooms/spaces, as a means of saving energy, or to improve safety.",
       "picture": "https://images.unsplash.com/photo-1616046619793-7e4badf3fe1f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=725&q=80",
