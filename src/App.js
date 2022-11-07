@@ -3,6 +3,7 @@ import "./App.css";
 import Main from "./layout/Main";
 import Blogs from "./pages/Blogs/Blogs";
 import Home from "./pages/Home/Home";
+import ServiceDetails from "./pages/ServiceDetails/ServiceDetails";
 import Services from "./pages/Services/Services";
 
 function App() {
@@ -22,6 +23,12 @@ function App() {
             {
                path: "services",
                element: <Services></Services>,
+            },
+            {
+               path: "services/:_id",
+               loader: ({ params }) =>
+                  fetch(`http://localhost:5000/services/${params._id}`),
+               element: <ServiceDetails></ServiceDetails>,
             },
          ],
       },
