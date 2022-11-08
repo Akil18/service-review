@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link, useLoaderData, useNavigate } from "react-router-dom";
+import { Link, useLoaderData} from "react-router-dom";
+import ReviewsDisplay from "../../components/ReviewsDisplay";
 import { AuthContext } from "../../contexts/UserContext";
 
 const ServiceDetails = () => {
@@ -73,17 +74,20 @@ const ServiceDetails = () => {
             <div className="px-32 grid grid-cols-1 gap-4 pb-32">
                <p>{description}</p>
                <p>Price: {price} lacs</p>
+               <ReviewsDisplay></ReviewsDisplay>
                {
                   user?.uid ?
-                     <form onSubmit={handleReviewSubmit}>
-                        <input
-                           name="review"
-                           type="text"
-                           placeholder="Type here..."
-                           className="input input-bordered w-full max-w-xs"
-                        />
-                        <input type="submit" className="btn" value="Add Review" />
-                     </form>
+                     <>
+                        <form className="flex" onSubmit={handleReviewSubmit}>
+                           <input
+                              name="review"
+                              type="text"
+                              placeholder="Type here..."
+                              className="input input-bordered w-4/5 mr-4"
+                           />
+                           <input type="submit" className="btn" value="Add Review" />
+                        </form>
+                     </>
                   :
                      <p className="font-bold">Please <Link className="text-blue-500 hover:text-blue-100" to='/login'>Login</Link> to Add Review</p>
                }
