@@ -1,6 +1,7 @@
 import { createBrowserRouter, Link, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Main from "./layout/Main";
+import AddService from "./pages/AddService/AddService";
 import Blogs from "./pages/Blogs/Blogs";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
@@ -47,6 +48,14 @@ function App() {
                element: (
                   <PrivateRoute>
                      <MyReviews></MyReviews>
+                  </PrivateRoute>
+               ),
+            },
+            {
+               path: "addservice",
+               element: (
+                  <PrivateRoute>
+                     <AddService></AddService>
                   </PrivateRoute>
                ),
             },

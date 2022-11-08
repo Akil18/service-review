@@ -38,6 +38,9 @@ const Header = () => {
                         <li>
                            <Link to="myreviews">MY REVIEWS</Link>
                         </li>
+                        <li>
+                           <Link to="addservice">ADD SERVICE</Link>
+                        </li>
                         <Link onClick={handleLogOut} className="btn">
                            Log Out
                         </Link>
