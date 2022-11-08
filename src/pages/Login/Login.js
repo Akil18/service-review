@@ -1,12 +1,38 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../contexts/UserContext";
 
 const Login = () => {
+   const { signIn, signInWithGoogle } = useContext(AuthContext);
+
    const handleSubmit = (event) => {
       event.preventDefault();
-      const email = event.target.email.value;
-      const password = event.target.password.value;
+      const form = event.target;
+      const email = form.email.value;
+      const password = form.password.value;
+
+      signIn(email, password)
+         .then((result) => {
+            const user = result.user;
+            console.log(user);
+            form.reset();
+         })
+         .catch((error) => {
+            console.log(error);
+         });
    };
+
+   const handleGoogleSignIn = () => {
+      signInWithGoogle()
+         .then((result) => {
+            const user = result.user;
+            console.log(user);
+         })
+         .catch((error) => {
+            console.log(error);
+         });
+   };
+
    return (
       <div>
          <div className="hero min-h-screen bg-base-200">
@@ -51,7 +77,10 @@ const Login = () => {
                         </Link>
                      </p>
                   </form>
-                  <button className="btn btn-outline btn-success m-2">
+                  <button
+                     onClick={handleGoogleSignIn}
+                     className="btn btn-outline btn-success m-2"
+                  >
                      Google
                   </button>
                </div>
