@@ -11,8 +11,6 @@ const Home = () => {
          .then((data) => setServices(data));
    }, []);
 
-   console.log(services);
-
    return (
       <div className="p-8">
          <div className="flex justify-evenly text-4xl font-bold px-44 py-8">

@@ -4,9 +4,11 @@ import Main from "./layout/Main";
 import Blogs from "./pages/Blogs/Blogs";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
+import MyReviews from "./pages/MyReviews/MyReviews";
 import Register from "./pages/Register/Register";
 import ServiceDetails from "./pages/ServiceDetails/ServiceDetails";
 import Services from "./pages/Services/Services";
+import PrivateRoute from "./routes/PrivateRoute";
 
 function App() {
    const router = createBrowserRouter([
@@ -39,6 +41,14 @@ function App() {
             {
                path: "register",
                element: <Register></Register>,
+            },
+            {
+               path: "myreviews",
+               element: (
+                  <PrivateRoute>
+                     <MyReviews></MyReviews>
+                  </PrivateRoute>
+               ),
             },
          ],
       },
