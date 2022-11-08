@@ -1,19 +1,48 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../contexts/UserContext";
 
 const ServiceDetails = () => {
    const service = useLoaderData();
    const { _id, name, price, description, picture } = service;
-   const {user} = useContext(AuthContext)
+   const {user} = useContext(AuthContext);
+   const [users, setUsers] = useState([]);
+   
+   useEffect(() => {
+      fetch("http://localhost:5000/users")
+         .then((res) => res.json())
+         .then((data) => {
+            setUsers(data);
+         })
+         .catch((error) => {
+            console.log(error);
+         });
+   }, [])
 
    const handleReviewSubmit = (event) => {
       event.preventDefault();
       const form = event.target;
       const review = form.review.value;
+      var username, photoUrl;
+
+      if(user?.displayName === null){
+         const currentUser = users.filter(usr => usr.email === user.email);
+         console.log(currentUser);
+         username = currentUser[0].name;
+         photoUrl = currentUser[0].photoUrl;
+      }
+      else{
+         username = user.displayName;
+         photoUrl = user.photoURL;
+      }
+
+      
+      console.log(user, username, photoUrl, user.email);
 
       const addReview = {
-         user: user.email,
+         name: username,
+         photoUrl,
+         email: user.email,
          review,
          serviceId : _id
       }

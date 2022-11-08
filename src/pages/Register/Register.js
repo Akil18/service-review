@@ -1,18 +1,19 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/UserContext";
 
 const Register = () => {
    const { createUser } = useContext(AuthContext);
+   const [user, setUser] = useState({});
 
    const handleSubmit = (event) => {
       event.preventDefault();
       const form = event.target;
-      const fullName = form.fullName.value;
+      const name = form.name.value;
       const photoUrl = form.photoUrl.value;
       const email = form.email.value;
       const password = form.password.value;
-      console.log(fullName, photoUrl, email, password);
+      console.log(name, photoUrl, email, password);
 
       createUser(email, password)
          .then((result) => {
@@ -23,7 +24,32 @@ const Register = () => {
          .catch((error) => {
             console.error(error);
          });
+
+         const newUser = {
+            name,
+            photoUrl,
+            email
+         }
+
+         setUser(newUser);
    };
+
+   useEffect(() => {
+      fetch("http://localhost:5000/users", {
+         method: "POST",
+         headers: {
+            "Content-Type": "application/json",
+         },
+         body: JSON.stringify(user),
+      })
+         .then((res) => res.json())
+         .then((data) => {
+            console.log(data);
+         })
+         .catch((error) => {
+            console.log(error);
+         });
+   }, [user]);
 
    return (
       <div>
@@ -40,8 +66,8 @@ const Register = () => {
                         </label>
                         <input
                            type="text"
-                           name="fullName"
-                           placeholder="Full Name"
+                           name="name"
+                           placeholder="Name"
                            className="input input-bordered"
                            required
                         />
