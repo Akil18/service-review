@@ -24,12 +24,13 @@ const Login = () => {
          .catch((error) => {
             console.log(error);
          });
-   };
-
-   const handleGoogleSignIn = () => {
-      signInWithGoogle()
+      };
+      
+      const handleGoogleSignIn = () => {
+         signInWithGoogle()
          .then((result) => {
             const user = result.user;
+            navigate(from, { replace: true });
             console.log(user);
          })
          .catch((error) => {
