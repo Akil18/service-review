@@ -42,6 +42,7 @@ const ServiceDetails = () => {
          photoUrl,
          email: user.email,
          review,
+         serviceName: name,
          serviceId : _id
       }
 
@@ -74,7 +75,7 @@ const ServiceDetails = () => {
             <div className="px-32 grid grid-cols-1 gap-4 pb-32">
                <p>{description}</p>
                <p>Price: {price} lacs</p>
-               <ReviewsDisplay></ReviewsDisplay>
+               <ReviewsDisplay serviceId={_id}></ReviewsDisplay>
                {
                   user?.uid ?
                      <>

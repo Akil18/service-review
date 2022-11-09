@@ -1,4 +1,6 @@
 import { createBrowserRouter, Link, RouterProvider } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import "./App.css";
 import Main from "./layout/Main";
 import AddService from "./pages/AddService/AddService";
@@ -12,6 +14,21 @@ import Services from "./pages/Services/Services";
 import PrivateRoute from "./routes/PrivateRoute";
 
 function App() {
+   const notify = (verdict) => toast(verdict, {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light"
+    });
+
+    const handleBtnClick = (action) => {
+      notify(action);
+    }
+
    const router = createBrowserRouter([
       {
          path: "/",
@@ -47,7 +64,7 @@ function App() {
                path: "myreviews",
                element: (
                   <PrivateRoute>
-                     <MyReviews></MyReviews>
+                     <MyReviews handleBtnClick={handleBtnClick}></MyReviews>
                   </PrivateRoute>
                ),
             },
@@ -76,6 +93,18 @@ function App() {
    return (
       <div className="App">
          <RouterProvider router={router}></RouterProvider>
+         <ToastContainer
+            position="top-right"
+            autoClose={3000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"
+        ></ToastContainer>
       </div>
    );
 }

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
-const ReviewsDisplay = () => {
+const ReviewsDisplay = ({serviceId}) => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/reviews")
+        fetch(`http://localhost:5000/reviews?serviceId=${serviceId}`)
             .then((res) => res.json())
             .then((data) => {
                 setReviews(data);
@@ -12,7 +12,7 @@ const ReviewsDisplay = () => {
             .catch((error) => {
                 console.log(error);
             });
-    }, []);
+    }, [serviceId]);
 
     return (
         <div>
