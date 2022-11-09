@@ -1,6 +1,6 @@
 import { createBrowserRouter, Link, RouterProvider } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import 'react-photo-view/dist/react-photo-view.css';
 import "./App.css";
 import Main from "./layout/Main";
 import AddService from "./pages/AddService/AddService";
