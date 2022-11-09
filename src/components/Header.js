@@ -41,7 +41,7 @@ const Header = () => {
                         <li>
                            <Link to="addservice">Add Service</Link>
                         </li>
-                        <Link onClick={handleLogOut} className="btn">
+                        <Link onClick={handleLogOut} className="btn rounded-none">
                            Log Out
                         </Link>
                      </>

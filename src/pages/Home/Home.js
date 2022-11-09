@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Gallery from "../../components/Gallery";
 import ServiceCard from "../../components/ServiceCard";
 import WorkPhases from "../../components/WorkPhases";
 
@@ -39,6 +40,7 @@ const Home = () => {
             </Link>
          </div>
          <WorkPhases></WorkPhases>
+         <Gallery></Gallery>
       </div>
    );
 };

@@ -13,7 +13,7 @@ const ServiceCard = ({ service }) => {
          <figure className="px-10 pt-10">
             <PhotoProvider>
                <PhotoView src={picture}>
-                  <img src={picture} alt={name} className="w-full h-64" />
+                  <img src={picture} alt={name} className="w-full h-64 cursor-pointer" />
                </PhotoView>
             </PhotoProvider>
          </figure>
