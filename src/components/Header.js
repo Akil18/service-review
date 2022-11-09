@@ -31,15 +31,15 @@ const Header = () => {
             <div className="navbar-end">
                <ul className="menu menu-horizontal px-2 gap-2">
                   <li>
-                     <Link to="blogs">BLOGS</Link>
+                     <Link to="blogs">Blogs</Link>
                   </li>
                   {user?.uid && (
                      <>
                         <li>
-                           <Link to="myreviews">MY REVIEWS</Link>
+                           <Link to="myreviews">My Reviews</Link>
                         </li>
                         <li>
-                           <Link to="addservice">ADD SERVICE</Link>
+                           <Link to="addservice">Add Service</Link>
                         </li>
                         <Link onClick={handleLogOut} className="btn">
                            Log Out

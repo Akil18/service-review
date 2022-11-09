@@ -18,7 +18,7 @@ const MyReviews = ({handleBtnClick}) => {
    }, [user?.email, reviews]);
    
    return (
-      <div>
+      <div className="h-screen">
          {
             reviews.length > 0 ?
             <>
