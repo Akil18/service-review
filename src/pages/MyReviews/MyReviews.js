@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import ReviewCard from "../../components/ReviewCard";
 import { AuthContext } from "../../contexts/UserContext";
 
@@ -19,6 +20,9 @@ const MyReviews = ({handleBtnClick}) => {
    
    return (
       <div className="h-screen">
+         <Helmet>
+            <title>My Reviews | Scheme CTG</title>
+         </Helmet>
          {
             reviews.length > 0 ?
             <>

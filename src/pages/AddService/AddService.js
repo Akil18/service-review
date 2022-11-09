@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const AddService = ({handleBtnClick}) => {
    
@@ -33,6 +34,9 @@ const AddService = ({handleBtnClick}) => {
 
    return (
       <div>
+         <Helmet>
+            <title>Add Service | Scheme CTG</title>
+         </Helmet>
          <h1 className="text-5xl font-bold my-12">Add A New Service</h1>
          <form className="pl-16 py-4 text-left" onSubmit={handleNewServiceSubmit}>
             <div className="flex flex-col">

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import ServiceCard from "../../components/ServiceCard";
 
 const Services = () => {
@@ -12,6 +13,9 @@ const Services = () => {
 
    return (
       <div>
+         <Helmet>
+            <title>Services | Scheme CTG</title>
+         </Helmet>
          <h1 className="text-5xl font-bold mt-12">Services</h1>
          <div className="grid grid-cols-3 justify-between gap-4 my-6">
             {services.map((service) => (

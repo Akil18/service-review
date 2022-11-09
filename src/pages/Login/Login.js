@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/UserContext";
 
@@ -40,6 +41,9 @@ const Login = () => {
 
    return (
       <div>
+         <Helmet>
+            <title>Login | Scheme CTG</title>
+         </Helmet>
          <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col">
                <div className="text-center">

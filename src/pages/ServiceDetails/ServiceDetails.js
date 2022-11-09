@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link, useLoaderData} from "react-router-dom";
 import ReviewsDisplay from "../../components/ReviewsDisplay";
 import { AuthContext } from "../../contexts/UserContext";
@@ -69,6 +70,9 @@ const ServiceDetails = () => {
 
    return (
       <div>
+         <Helmet>
+            <title>{name} | Scheme CTG</title>
+         </Helmet>
          <h1 className="text-5xl font-bold my-12">{name}</h1>
          <div className="grid grid-cols-1 gap-8 justify-items-center px-8">
             <img src={picture} alt={name} className="" />

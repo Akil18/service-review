@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Gallery from "../../components/Gallery";
 import ServiceCard from "../../components/ServiceCard";
@@ -15,6 +16,9 @@ const Home = () => {
 
    return (
       <div>
+         <Helmet>
+            <title>Home | Scheme CTG</title>
+         </Helmet>
          <div className="flex justify-evenly text-4xl font-bold px-44 py-8">
             <h1>MODERN</h1>
             <h1>.</h1>

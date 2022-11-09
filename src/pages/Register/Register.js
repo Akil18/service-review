@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/UserContext";
 
@@ -53,6 +54,9 @@ const Register = () => {
 
    return (
       <div>
+         <Helmet>
+            <title>Register | Scheme CTG</title>
+         </Helmet>
          <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col">
                <div className="text-center">
