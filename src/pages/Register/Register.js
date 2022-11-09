@@ -109,7 +109,7 @@ const Register = () => {
                         />
                      </div>
                      <div className="form-control mt-6">
-                        <button className="btn btn-primary">Register</button>
+                        <button className="btn btn-primary rounded-none">Register</button>
                      </div>
                      <p>
                         Already have an account?{" "}

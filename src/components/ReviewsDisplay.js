@@ -19,13 +19,13 @@ const ReviewsDisplay = ({serviceId}) => {
             {
                 reviews.map(rev => 
                     <div key={rev._id} className="flex p-4 items-center gap-4">
-                        <div className="bg-base-300 w-4/5 rounded-box py-4">{rev.review}</div>
+                        <div className="bg-base-300 w-4/5 p-4 text-left">{rev.review}</div>
                         <div className="avatar">
                             <div className="w-12 rounded-full">
                                 <img src={rev.photoUrl} alt={rev.name} />
                             </div>
                         </div>
-                        <span>{rev.name}</span>
+                        <span className="font-semibold">{rev.name}</span>
                     </div> 
                 )
             }

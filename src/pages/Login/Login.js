@@ -73,18 +73,18 @@ const Login = () => {
                         <label className="label"></label>
                      </div>
                      <div className="form-control mt-6">
-                        <button className="btn btn-primary">Login</button>
+                        <button className="btn btn-primary rounded-none">Login</button>
                      </div>
                      <p>
                         Don't have an account{" "}
-                        <Link to="/register" className="text-blue-500">
+                        <Link to="/register" className="text-blue-500 hover:text-blue-200">
                            Register
                         </Link>
                      </p>
                   </form>
                   <button
                      onClick={handleGoogleSignIn}
-                     className="btn btn-outline btn-success m-2"
+                     className="btn btn-outline rounded-none btn-success m-4"
                   >
                      Google
                   </button>

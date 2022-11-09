@@ -73,8 +73,10 @@ const ServiceDetails = () => {
          <div className="grid grid-cols-1 gap-8 justify-items-center px-8">
             <img src={picture} alt={name} className="" />
             <div className="px-32 grid grid-cols-1 gap-4 pb-32">
-               <p>{description}</p>
-               <p>Price: {price} lacs</p>
+               <div className="border-2 p-8">
+                  <p>{description}</p>
+                  <p className="pt-4 font-bold">Price: {price} lacs</p>
+               </div>
                <ReviewsDisplay serviceId={_id}></ReviewsDisplay>
                {
                   user?.uid ?
@@ -84,7 +86,7 @@ const ServiceDetails = () => {
                               name="review"
                               type="text"
                               placeholder="Type here..."
-                              className="input input-bordered w-4/5 mr-4"
+                              className="input input-bordered w-4/5 mr-4 rounded-none"
                            />
                            <input type="submit" className="btn" value="Add Review" />
                         </form>
