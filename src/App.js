@@ -72,7 +72,7 @@ function App() {
                path: "addservice",
                element: (
                   <PrivateRoute>
-                     <AddService></AddService>
+                     <AddService handleBtnClick={handleBtnClick}></AddService>
                   </PrivateRoute>
                ),
             },

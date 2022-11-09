@@ -20,7 +20,7 @@ const MyReviews = ({handleBtnClick}) => {
    return (
       <div>
          {
-            reviews ?
+            reviews.length > 0 ?
             <>
                <h1 className="text-5xl font-bold my-12">Reviews given</h1>
                <div className="grid grid-cols-3 justify-between gap-4 my-6">
@@ -30,7 +30,7 @@ const MyReviews = ({handleBtnClick}) => {
                </div>
             </>
             :
-               <h1 className="text-5xl font-bold my-12">No Reviews given</h1>
+               <h1 className="text-5xl font-bold my-12">No Reviews were added</h1>
          }
       </div>
    );
