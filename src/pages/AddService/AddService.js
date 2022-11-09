@@ -11,7 +11,7 @@ const AddService = ({handleBtnClick}) => {
          picture: form.picture.value,
          price: form.price.value
       }
-      fetch("http://localhost:5000/services", {
+      fetch("https://service-review-app-server-side.vercel.app/services", {
          method: "POST",
          headers: {
             "Content-Type": "application/json",

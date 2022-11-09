@@ -1,13 +1,19 @@
 import React, { useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../contexts/UserContext";
+import { FallingLines } from  'react-loader-spinner';
 
 const PrivateRoute = ({ children }) => {
    const { user, loading } = useContext(AuthContext);
    const location = useLocation();
 
    if (loading) {
-      return <h1>Loading...</h1>;
+      return <FallingLines
+               color="#4fa94d"
+               width="100"
+               visible={true}
+               ariaLabel='falling-lines-loading'
+            />;
    }
 
    if (user && user.uid) {

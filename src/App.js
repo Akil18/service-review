@@ -49,7 +49,7 @@ function App() {
             {
                path: "services/:_id",
                loader: ({ params }) =>
-                  fetch(`http://localhost:5000/services/${params._id}`),
+                  fetch(`https://service-review-app-server-side.vercel.app/services/${params._id}`),
                element: <ServiceDetails></ServiceDetails>,
             },
             {

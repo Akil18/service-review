@@ -35,7 +35,7 @@ const Register = () => {
    };
 
    useEffect(() => {
-      fetch("http://localhost:5000/users", {
+      fetch("https://service-review-app-server-side.vercel.app/users", {
          method: "POST",
          headers: {
             "Content-Type": "application/json",

@@ -10,7 +10,7 @@ const ServiceDetails = () => {
    const [users, setUsers] = useState([]);
 
    useEffect(() => {
-      fetch("http://localhost:5000/users")
+      fetch("https://service-review-app-server-side.vercel.app/users")
          .then((res) => res.json())
          .then((data) => {
             setUsers(data);
@@ -46,7 +46,7 @@ const ServiceDetails = () => {
          serviceId : _id
       }
 
-      fetch("http://localhost:5000/reviews", {
+      fetch("https://service-review-app-server-side.vercel.app/reviews", {
          method: "POST",
          headers: {
             "Content-Type": "application/json",
