@@ -1,4 +1,4 @@
-# Scheme CTG - Architect Portfolio Website - Assignment 11
+# Scheme CTG - Architect Portfolio Website
 
 - Routing between pages enabled using react-router-dom
 - Login and register for user to access Private routes
